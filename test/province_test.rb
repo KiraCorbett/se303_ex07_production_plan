@@ -6,13 +6,21 @@ require_relative '../lib/data'
 
 class ProvinceTest < Minitest::Test
 
-  def test_province_shortfall
+  # should var asia be a class wide object? Fowler tries to lift content of 
+
+  def test_province
     asia = Province.new(sample_province_data)
     assert_equal(5, asia.shortfall)
-  end
-
-  def test_province_profit
-    asia = new Province.new(sample_province_data)
     assert_equal(230, asia.profit)
   end
+
+  # def test_province_shortfall
+  #   asia = Province.new(sample_province_data)
+  #   assert_equal(5, asia.shortfall)
+  # end
+
+  # def test_province_profit
+  #   asia = new Province.new(sample_province_data)
+  #   assert_equal(230, asia.profit)
+  # end
 end
