@@ -8,10 +8,13 @@ class ProvinceTest < Minitest::Test
 
   # should var asia be a class wide object? Fowler tries to lift content of 
 
+  def setup
+    @asia = Province.new(sample_province_data)
+  end
+
   def test_province
-    asia = Province.new(sample_province_data)
-    assert_equal(5, asia.shortfall)
-    assert_equal(230, asia.profit)
+    assert_equal(5, @asia.shortfall)
+    assert_equal(230, @asia.profit)
   end
 
   # def test_province_shortfall
