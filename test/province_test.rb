@@ -12,9 +12,8 @@ class ProvinceTest < Minitest::Test
     @asia = Province.new(sample_province_data)
   end
 
-  def test_province
+  def test_province_shortfall
     assert_equal(5, @asia.shortfall)
-    assert_equal(230, @asia.profit)
   end
 
   # def test_province_shortfall
